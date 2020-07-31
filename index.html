@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Calculator</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+
+    <script type="text/babel" scr="reactApp.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Calculator</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+    <script type="text/babel">
+      class Calculator extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            x: props.x || 0,
+            y: props.y || 0,
+            answer: 0,
+          };
+        }
+
+        updateX = (event) => {
+          this.setState({ x: event.target.value });
+        };
+
+        updateY = (event) => {
+          this.setState({ y: event.target.value });
+        };
+
+        handleAdd = (event) => {
+          this.setState((state) => ({
+            answer: Number(state.x) + Number(state.y),
+          }));
+        };
+
+        handleSubtract = (event) => {
+          this.setState((state) => ({
+            answer: Number(state.x) - Number(state.y),
+          }));
+        };
+
+        handleMultiply = (event) => {
+          this.setState((state) => ({
+            answer: Number(state.x) * Number(state.y),
+          }));
+        };
+
+        handleDivide = (event) => {
+          this.setState((state) => ({
+            answer: Number(state.x) / Number(state.y),
+          }));
+        };
+
+        render() {
+          return (
+            <div>
+              <h1>My Calculator</h1>
+              <form>
+                <label>x</label>
+                <input type="number" onChange={this.updateX} />
+                <br />
+                <label>y</label>
+                <input type="number" onChange={this.updateY} />
+              </form>
+              <button onClick={this.handleAdd}>+</button>
+              <br />
+              <button onClick={this.handleSubtract}>-</button>
+              <br />
+              <button onClick={this.handleMultiply}>*</button>
+              <br />
+              <button onClick={this.handleDivide}>/</button>
+              <br />
+              <output> {this.state.answer}</output>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Calculator x={0} y={0} />,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html> -->
